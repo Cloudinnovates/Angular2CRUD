@@ -7,7 +7,6 @@ import {Contact} from './contact';
 export class ApiService {
     private elastic: boolean = false;
     private firebase: boolean = true;
-    public localStorageKey: string;
 
     /**
      * ApiService Constructor.
