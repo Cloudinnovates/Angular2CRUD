@@ -38,7 +38,7 @@ export class LoggedInRouterOutletDirective extends RouterOutlet {
         var url = this.parentRouter.lastNavigationAttempt;
 
         if (!this.publicRoutes[url] && !this._apiService.getLocalStorageSession()) {
-            this.parentRouter.navigateByUrl('/login');
+            this.parentRouter.navigate(['Login']);
         }
         return super.activate(instruction);
     }
