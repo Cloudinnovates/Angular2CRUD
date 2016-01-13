@@ -14,8 +14,7 @@ var jsLibFiles = [
 
 // List of .css libs.
 var cssLibFiles = [
-    'node_modules/material-design-lite/material.min.css',
-    'app/styles/demo.css'
+    'node_modules/material-design-lite/material.min.css'
 ];
 
 // Concat all .js libs.
