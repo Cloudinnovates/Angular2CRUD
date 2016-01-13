@@ -16,22 +16,14 @@ import {ApiService} from './api.service';
         <nav>
             <button [routerLink]="['Contacts']">Contact List</button> | <!-- Bind clickable HTML to a route. -->
             <button [routerLink]="['ContactNew']">New Contact</button> |
-            <button (click)="onLogout()">Logout</button>
-            
-            <span class="pull-right">
-                {{email}} &nbsp;
-            </span>
+            <button (click)="onLogout()">Logout</button> |
+            <span>{{email}}</span>
         </nav>
 
         <br>
 
         <router-outlet></router-outlet> <!-- Display views produced by the router. -->
-    `,
-    styles: [`
-        .pull-right {
-            float: right
-        }
-    `]
+    `
 })
 @RouteConfig([ // Configure a router with RouteDefinitions, each mapping a URL path to a component.
     { path: '/contacts', name: 'Contacts', component: ContactListComponent },
