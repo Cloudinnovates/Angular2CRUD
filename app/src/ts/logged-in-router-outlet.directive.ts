@@ -7,22 +7,19 @@ import {ApiService} from './api.service';
     providers: [ApiService]
 })
 export class LoggedInRouterOutletDirective extends RouterOutlet {
-    public publicRoutes: any;
-    private parentRouter: Router;
+    public publicRoutes: any; // Public route dictionary.
     
     /**
      * LoggedInRouterOutletDirective Constructor.
      */
     constructor(_elementRef: ElementRef,
                 _loader: DynamicComponentLoader,
-                _parentRouter: Router,
+                private _parentRouter: Router,
                 @Attribute('name') nameAttr: string,
                 private _apiService: ApiService) {
         super(_elementRef, _loader, _parentRouter, nameAttr);
 
-        this.parentRouter = _parentRouter;
-
-        this.publicRoutes = {
+        this.publicRoutes = { // Dictionary of routes anyone can access (no auth required).
             '/login': true,
             '/create': true
         };
@@ -35,10 +32,10 @@ export class LoggedInRouterOutletDirective extends RouterOutlet {
      * REF: https://github.com/angular/angular/blob/2.0.0-beta.1/modules/angular2/src/router/router_outlet.ts
      */
     activate(instruction: ComponentInstruction) {
-        var url = this.parentRouter.lastNavigationAttempt;
+        var url = this._parentRouter.lastNavigationAttempt;
 
         if (!this.publicRoutes[url] && !this._apiService.getLocalStorageSession()) {
-            this.parentRouter.navigate(['Login']);
+            this._parentRouter.navigate(['Login']);
         }
         return super.activate(instruction);
     }
