@@ -1,6 +1,6 @@
 import {Injectable} from 'angular2/core';
-import {ElasticApiService} from './elastic-api.service';
-import {FirebaseApiService} from './firebase-api.service';
+import {ApiElasticService} from './api-elastic.service';
+import {ApiFirebaseService} from './api-firebase.service';
 import {Contact} from './contact';
 
 @Injectable()
@@ -11,21 +11,21 @@ export class ApiService {
     /**
      * ApiService Constructor.
      *
-     * @param {ElasticApiService} _elasticApiService - Private Elastic service.
-     * @param {FirebaseApiService} _firebaseApiService - Private Firebase service.
+     * @param {ApiElasticService} _apiElasticService - Private Elastic service.
+     * @param {ApiFirebaseService} _apiFirebaseService - Private Firebase service.
      */
-    constructor(private _elasticApiService: ElasticApiService,
-                private _firebaseApiService: FirebaseApiService) {}
+    constructor(private _apiElasticService: ApiElasticService,
+                private _apiFirebaseService: ApiFirebaseService) {}
 
     /**
      * Get a list of all contacts.  
      */
     getContacts() {
         if (this.elastic) {
-            return this._elasticApiService.getContacts();
+            return this._apiElasticService.getContacts();
         }
         else if (this.firebase) {
-            return this._firebaseApiService.getContacts();
+            return this._apiFirebaseService.getContacts();
         }
     }
 
@@ -34,10 +34,10 @@ export class ApiService {
      */
     init() {
         if (this.elastic) {
-            return this._elasticApiService.init();
+            return this._apiElasticService.init();
         }
         else if (this.firebase) {
-            return this._firebaseApiService.init();
+            return this._apiFirebaseService.init();
         }
     }
 
@@ -48,10 +48,10 @@ export class ApiService {
      */
     createContact(contact: Contact) {
         if (this.elastic) {
-            return this._elasticApiService.createContact(contact);
+            return this._apiElasticService.createContact(contact);
         }
         else if (this.firebase) {
-            return this._firebaseApiService.createContact(contact);
+            return this._apiFirebaseService.createContact(contact);
         }
     }
 
@@ -62,10 +62,10 @@ export class ApiService {
      */
     getContact(id: number | string) {
         if (this.elastic) {
-            return this._elasticApiService.getContact(id);
+            return this._apiElasticService.getContact(id);
         }
         else if (this.firebase) {
-            return this._firebaseApiService.getContact(id);
+            return this._apiFirebaseService.getContact(id);
         }
     }
 
@@ -76,10 +76,10 @@ export class ApiService {
      */
     updateContact(contact: Contact) {
         if (this.elastic) {
-            return this._elasticApiService.updateContact(contact);
+            return this._apiElasticService.updateContact(contact);
         }
         else if (this.firebase) {
-            return this._firebaseApiService.updateContact(contact);
+            return this._apiFirebaseService.updateContact(contact);
         }
     }
 
@@ -90,10 +90,10 @@ export class ApiService {
      */
     deleteContact(id: number | string) {
         if (this.elastic) {
-            return this._elasticApiService.deleteContact(id);
+            return this._apiElasticService.deleteContact(id);
         }
         else if (this.firebase) {
-            return this._firebaseApiService.deleteContact(id);
+            return this._apiFirebaseService.deleteContact(id);
         }  
     }
 
@@ -109,7 +109,7 @@ export class ApiService {
             console.log('ERROR: createAccount(email, password, success) for Elastic is not implemented.');
         }
         else if (this.firebase) {
-            return this._firebaseApiService.createAccount(email, password, success);
+            return this._apiFirebaseService.createAccount(email, password, success);
         } 
     }
 
@@ -125,7 +125,7 @@ export class ApiService {
             console.log('ERROR: loginAccount(email, password, success) for Elastic is not implemented.');
         }
         else if (this.firebase) {
-            return this._firebaseApiService.loginAccount(email, password, success);
+            return this._apiFirebaseService.loginAccount(email, password, success);
         } 
     }
 
@@ -139,7 +139,7 @@ export class ApiService {
             console.log('ERROR: logoutAccount(success) for Elastic is not implemented.');
         }
         else if (this.firebase) {
-            return this._firebaseApiService.logoutAccount(success);
+            return this._apiFirebaseService.logoutAccount(success);
         }
     }
 
@@ -155,7 +155,7 @@ export class ApiService {
             console.log('ERROR: deleteAccount(email, password, success) for Elastic is not implemented.');
         }
         else if (this.firebase) {
-            return this._firebaseApiService.deleteAccount(email, password, success);
+            return this._apiFirebaseService.deleteAccount(email, password, success);
         }
     }
 
@@ -167,7 +167,7 @@ export class ApiService {
             console.log('ERROR: getLoggedInAccountEmail() for Elastic is not implemented.');
         }
         else if (this.firebase) {
-            return this._firebaseApiService.getLoggedInAccountEmail();
+            return this._apiFirebaseService.getLoggedInAccountEmail();
         }
     }
 
@@ -179,7 +179,7 @@ export class ApiService {
             console.log('ERROR: getLocalStorageSession() for Elastic is not implemented.');
         }
         else if (this.firebase) {
-            return this._firebaseApiService.getLocalStorageSession();
+            return this._apiFirebaseService.getLocalStorageSession();
         }
     }
 }

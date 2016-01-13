@@ -6,11 +6,11 @@ import 'rxjs/add/operator/map'; // Issue: https://github.com/angular/angular/pul
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class ElasticApiService {
+export class ApiElasticService {
     public BASE_URL: string = 'http://localhost:9200/angular2crud';
 
     /**
-     * ElasticApiService Constructor.
+     * ApiElasticService Constructor.
      *
      * @param {Http} _http - Private Http service injected into this component.
      * HTTP Info: https://angular.io/docs/ts/latest/api/http/Http-class.html

@@ -28,11 +28,11 @@ import {ApiService} from './api.service';
         }
     `]
 })
-export class LoginComponent {
+export class AccountLoginComponent {
     public loginError = false; // True if there is a login error.
 
     /**
-     * LoginComponent Constructor.
+     * AccountLoginComponent Constructor.
      *
      * @param {Router} _router - Private Router injected into this component.
      * @param {ApiService} _apiService - Private ApiService injected into this component.

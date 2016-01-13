@@ -23,8 +23,7 @@ import {Contact} from './contact';
             <button type="button" (click)="onEdit()">Edit</button>
             <button type="button" (click)="onDelete()">Delete</button>
         </div>
-    `,
-    styles: []
+    `
 })
 export class ContactDetailComponent implements OnInit {
     public contact: Contact; // Current contact we are viewing.

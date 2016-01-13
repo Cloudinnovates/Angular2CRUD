@@ -17,7 +17,7 @@ import {ApiService} from './api.service';
         </form>
     `
 })
-export class CreateComponent {
+export class AccountCreateComponent {
 
     /**
      * CreateComponent Constructor.

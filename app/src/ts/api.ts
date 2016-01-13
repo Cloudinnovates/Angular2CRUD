@@ -1,6 +1,6 @@
 import {ApiService} from './api.service';
-import {ElasticApiService} from './elastic-api.service';
-import {FirebaseApiService} from './firebase-api.service';
+import {ApiElasticService} from './api-elastic.service';
+import {ApiFirebaseService} from './api-firebase.service';
 
 /**
  * Provides a basic set of injectables to use the {@link API} service in any application.
@@ -10,6 +10,6 @@ import {FirebaseApiService} from './firebase-api.service';
  */
 export const API_PROVIDERS: any[] = [
     ApiService,
-    ElasticApiService,
-    FirebaseApiService
+    ApiElasticService,
+    ApiFirebaseService
 ];

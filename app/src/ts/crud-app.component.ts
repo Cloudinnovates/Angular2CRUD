@@ -1,21 +1,21 @@
 import {Component} from 'angular2/core';
 import {RouteConfig} from 'angular2/router';
+import {AccountLoginComponent} from './account-login.component';
+import {AccountCreateComponent} from './account-create.component';
+import {AuthRouterOutletDirective} from './auth-router-outlet.directive';
 import {DashboardComponent} from './dashboard.component';
-import {LoginComponent} from './login.component';
-import {CreateComponent} from './create.component';
-import {LoggedInRouterOutletDirective} from './logged-in-router-outlet.directive';
 
 @Component({
     selector: 'crud-app',
-    directives: [LoggedInRouterOutletDirective],
+    directives: [AuthRouterOutletDirective],
     template: `
-        <logged-in-router-outlet></logged-in-router-outlet> <!-- Display views produced by the router. -->
+        <auth-router-outlet></auth-router-outlet> <!-- Display views produced by the router. -->
     `
 })
 @RouteConfig([ // Configure a router with RouteDefinitions, each mapping a URL path to a component.
-    { path: '/', name: 'Login', component: LoginComponent },
+    { path: '/', name: 'Login', component: AccountLoginComponent },
     { path: '/dashboard/...', name: 'Dashboard', component: DashboardComponent },
-    { path: '/login', name: 'Login', component: LoginComponent },
-    { path: '/create', name: 'Create', component: CreateComponent }
+    { path: '/login', name: 'Login', component: AccountLoginComponent },
+    { path: '/create', name: 'Create', component: AccountCreateComponent }
 ])
 export class CrudAppComponent {}

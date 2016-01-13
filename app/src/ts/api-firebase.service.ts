@@ -6,13 +6,13 @@ import 'rxjs/add/operator/map'; // Issue: https://github.com/angular/angular/pul
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class FirebaseApiService {
+export class ApiFirebaseService {
     private BASE_URL: string = 'https://angular2crud.firebaseio.com';
     private LOCAL_STORAGE_SESSION_KEY: string = 'firebase:session::angular2crud';
     private firebase = new Firebase(this.BASE_URL);
 
     /**
-     * FirebaseApiService Constructor.
+     * ApiFirebaseService Constructor.
      *
      * @param {Http} _http - Private Http service injected into this component.
      * HTTP Info: https://angular.io/docs/ts/latest/api/http/Http-class.html
