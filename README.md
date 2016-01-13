@@ -8,7 +8,6 @@ Based off of the Angular 1 version: https://github.com/jshea/AngularCRUD.
 
 Build Instructions:
 
-0. npm install --global gulp
 1. git clone https://github.com/camargo/Angular2CRUD.git
 2. npm install
 3. npm start
