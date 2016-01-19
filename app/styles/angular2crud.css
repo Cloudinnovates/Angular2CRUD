@@ -1,0 +1,18 @@
+section.section--center {
+    padding-top: 68px;
+    max-width: 330px;
+}
+
+.center {
+    text-align: center;
+}
+
+.landing-card > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('http://www.getmdl.io/assets/demos/welcome_card.jpg') left center / cover;
+}
+
+.error {
+    color: red;
+}

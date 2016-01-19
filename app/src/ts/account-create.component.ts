@@ -5,16 +5,37 @@ import {ApiService} from './api.service';
 @Component({
     selector: 'create',
     template: `
-        <h4>Create Account</h4>
+        <section class="section--center mdl-grid">
+            <div class="landing-card mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                    <h4 class="mdl-card__title-text">Create Account</h4>
+                </div>
 
-        <form #f="ngForm" (ngSubmit)="onSubmit(email.value, password.value)">
-            <input type="email" #email class="" id="email" placeholder="Email" required>
-            
-            <input type="password" #password class="" placeholder="Password" required>
 
-            <button type="submit">Submit</button>
-            <a href="login">Goto Login Page</a>
-        </form>
+                <div class="mdl-card__supporting-text">
+                    <form #f="ngForm" (ngSubmit)="onSubmit(email.value, password.value)">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input type="email" #email class="mdl-textfield__input" id="email" required>
+                            <label class="mdl-textfield__label" for="email">Email</label>
+                        </div>
+                        
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input type="password" #password class="mdl-textfield__input" required>
+                            <label class="mdl-textfield__label" for="password">Password</label>
+                        </div>
+
+                        <br>
+                        <br>
+
+                        <div class="center mdl-card__actions mdl-card--border">
+                            <br>
+                            <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Submit</button>
+                            <a href="login" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Goto Login Page</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     `
 })
 export class AccountCreateComponent {

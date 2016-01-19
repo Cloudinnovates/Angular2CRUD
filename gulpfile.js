@@ -14,7 +14,8 @@ var jsLibFiles = [
 
 // List of .css libs.
 var cssLibFiles = [
-    'node_modules/material-design-lite/material.min.css'
+    'node_modules/material-design-lite/material.min.css',
+    'app/styles/angular2crud.css'
 ];
 
 // Concat all .js libs.

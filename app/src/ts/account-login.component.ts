@@ -5,8 +5,8 @@ import {ApiService} from './api.service';
 @Component({
     selector: 'login',
     template: `
-    <section class="section--center mdl-grid mdl-grid--no-spacing">
-        <div class="login-card mdl-card mdl-shadow--2dp">
+    <section class="section--center mdl-grid">
+        <div class="landing-card mdl-card mdl-shadow--2dp">
             <div class="mdl-card__title">
                 <h4 class="mdl-card__title-text">Login</h4>
             </div>
@@ -44,26 +44,7 @@ import {ApiService} from './api.service';
         </div>
     </section>
     `,
-    styles: [`
-        section.section--center {
-            padding-top: 68px;
-            max-width: 330px;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .login-card > .mdl-card__title {
-            color: #fff;
-            height: 176px;
-            background: url('http://www.getmdl.io/assets/demos/welcome_card.jpg') left center / cover;
-        }
-
-        .error {
-            color: red;
-        }
-    `]
+    styles: []
 })
 export class AccountLoginComponent {
     public loginError = false; // True if there is a login error.
