@@ -12,8 +12,6 @@ Build Instructions:
 2. npm install
 3. npm start
 
-Note: Default back-end is currently set to Firebase so the application should work out of the box. You can set the back-end to Elastic in api.service.ts.
-
 Supplemental Instruction - Try these tutorials first to get acquainted with Angular 2:
 
 1. https://angular.io/docs/ts/latest/quickstart.html
