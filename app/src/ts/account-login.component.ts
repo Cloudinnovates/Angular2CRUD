@@ -7,7 +7,7 @@ import {ApiService} from './api.service';
     template: `
             <h4>Login</h4>
 
-            <span class="center error" *ngIf="loginError">
+            <span class="error" *ngIf="loginError">
                 Invalid Email/Password Combination. 
                 Please Try Again.
                 <br>
