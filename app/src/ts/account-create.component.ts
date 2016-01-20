@@ -5,37 +5,18 @@ import {ApiService} from './api.service';
 @Component({
     selector: 'create',
     template: `
-        <section class="section--center mdl-grid">
-            <div class="landing-card mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title">
-                    <h4 class="mdl-card__title-text">Create Account</h4>
-                </div>
+        <h4>Create Account</h4>
 
+        <form #f="ngForm" (ngSubmit)="onSubmit(email.value, password.value)">
+            <label for="email">Email</label>
+            <input type="email" #email id="email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" #password required>
 
-                <div class="mdl-card__supporting-text">
-                    <form #f="ngForm" (ngSubmit)="onSubmit(email.value, password.value)">
-                        <div class="mdl-textfield mdl-js-textfield">
-                            <input type="email" #email class="mdl-textfield__input" id="email" required>
-                            <label class="mdl-textfield__label" for="email">Email</label>
-                        </div>
-                        
-                        <div class="mdl-textfield mdl-js-textfield">
-                            <input type="password" #password class="mdl-textfield__input" required>
-                            <label class="mdl-textfield__label" for="password">Password</label>
-                        </div>
-
-                        <br>
-                        <br>
-
-                        <div class="center mdl-card__actions mdl-card--border">
-                            <br>
-                            <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Submit</button>
-                            <a href="login" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Goto Login Page</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+            <button type="submit">Submit</button>
+            <a href="login">Goto Login Page</a>
+        </form>
     `
 })
 export class AccountCreateComponent {
