@@ -3,15 +3,15 @@ import {Router, RouterOutlet, ComponentInstruction} from 'angular2/router';
 import {ApiService} from './api.service';
 
 @Directive({
-    selector: 'auth-router-outlet',
+    selector: 'account-auth-router-outlet',
     providers: [ApiService]
 })
-export class AuthRouterOutletDirective extends RouterOutlet {
+export class AccountAuthRouterOutletDirective extends RouterOutlet {
     public publicRoutes: any; // Public route dictionary.
     private parentRouter: Router; // Reference to parent router of this router outlet.
     
     /**
-     * AuthRouterOutletDirective Constructor.
+     * AccountAuthRouterOutletDirective Constructor.
      */
     constructor(_elementRef: ElementRef,
                 _loader: DynamicComponentLoader,
