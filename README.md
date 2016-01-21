@@ -4,8 +4,6 @@ This is a sample CRUD - Create, Read, Update, Delete - application written in An
 
 Try out the live application here: http://camargo.github.io/Angular2CRUD/
 
-Based off of the Angular 1 version: https://github.com/jshea/AngularCRUD.
-
 Build Instructions:
 
 1. git clone https://github.com/camargo/Angular2CRUD.git
@@ -16,3 +14,5 @@ Supplemental Instruction - Try these tutorials first to get acquainted with Angu
 
 1. https://angular.io/docs/ts/latest/quickstart.html
 2. https://angular.io/docs/ts/latest/tutorial/
+
+Based off of the Angular 1 version: https://github.com/jshea/AngularCRUD.
