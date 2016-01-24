@@ -14,7 +14,7 @@ import {DashboardComponent} from './dashboard.component';
 })
 @RouteConfig([ // Configure a router with RouteDefinitions, each mapping a URL path to a component.
     { path: '/', name: 'Login', component: AccountLoginComponent },
-    { path: '/dashboard/...', name: 'Dashboard', component: DashboardComponent },
+    { path: '/dashboard/...', name: 'Dashboard', component: DashboardComponent }, // ... denotes sub-routes in DashboardComponent.
     { path: '/login', name: 'Login', component: AccountLoginComponent },
     { path: '/create', name: 'Create', component: AccountCreateComponent }
 ])
