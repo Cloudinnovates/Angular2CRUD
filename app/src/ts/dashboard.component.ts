@@ -32,7 +32,7 @@ import {ApiService} from './api.service';
     { path: '/contact/edit/:id', name: 'ContactEdit', component: ContactEditComponent },
 ])
 export class DashboardComponent implements OnInit {
-    public email: string; // Logged-in user email.
+    public email: string; // Logged in user email.
     
     /**
      * DashboardComponent Constructor.
