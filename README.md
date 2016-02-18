@@ -10,6 +10,8 @@ Build Instructions:
 2. npm install
 3. npm start
 
+NOTE: If you're on a Mac, you will need to run npm as sudo.
+
 Supplemental Instruction - Try these tutorials first to get acquainted with Angular 2:
 
 1. https://angular.io/docs/ts/latest/quickstart.html
