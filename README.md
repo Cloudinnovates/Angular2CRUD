@@ -6,6 +6,7 @@ Try out the live application here: http://camargo.github.io/Angular2CRUD/ (Note 
 
 Build Instructions:
 
+0. npm install gulp -g
 1. git clone https://github.com/camargo/Angular2CRUD.git
 2. npm install
 3. npm start
