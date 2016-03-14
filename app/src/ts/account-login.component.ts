@@ -1,9 +1,10 @@
 import {Component} from 'angular2/core';
-import {Router} from 'angular2/router';
+import {Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {ApiService} from './api.service';
 
 @Component({
     selector: 'login',
+    directives: [ROUTER_DIRECTIVES],
     template: `
         <h4>Login</h4>
 

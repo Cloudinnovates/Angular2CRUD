@@ -55,6 +55,7 @@ System.register(['angular2/core', 'angular2/router', './api.service'], function(
                 AccountLoginComponent = __decorate([
                     core_1.Component({
                         selector: 'login',
+                        directives: [router_1.ROUTER_DIRECTIVES],
                         template: "\n        <h4>Login</h4>\n\n        <span *ngIf=\"loginError\">\n            Invalid Email/Password Combination. \n            Please Try Again.\n            <br>\n            <br>\n        </span>\n\n        <form #f=\"ngForm\" (ngSubmit)=\"onSubmit(email.value, password.value)\">\n            <label for=\"email\">Email</label>\n            <input type=\"email\" #email id=\"email\" required>\n\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password required>\n\n            <button type=\"submit\">Submit</button>\n            <a [routerLink]=\"['./Create']>Create Account</a>\n        </form>\n    "
                     }), 
                     __metadata('design:paramtypes', [router_1.Router, api_service_1.ApiService])
