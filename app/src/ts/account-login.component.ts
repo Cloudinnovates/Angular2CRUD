@@ -23,7 +23,7 @@ import {ApiService} from './api.service';
             <input type="password" #password required>
 
             <button type="submit">Submit</button>
-            <a [routerLink]="['./Create']>Create Account</a>
+            <button [routerLink]="['Create']>Create Account</button>
         </form>
     `
 })
