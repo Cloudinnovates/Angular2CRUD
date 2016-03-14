@@ -2,6 +2,9 @@
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');
+var ts = require('gulp-typescript');
+var tslint = require('gulp-tslint');
+var tsProject = ts.createProject('tsconfig.json');
 
 // Application files.
 var appFiles = 'app/src/ts/*.ts';
@@ -18,11 +21,6 @@ var angular2Files = [
     'node_modules/angular2/bundles/http.dev.js'
 ];
 
-// List of .css libs.
-var cssFiles = [
-    'app/styles/angular2crud.css'
-];
-
 // Concat all .js libs.
 gulp.task('concat-angular', function() {
     return gulp.src(angular2Files)
@@ -30,12 +28,25 @@ gulp.task('concat-angular', function() {
                .pipe(gulp.dest('./dist'));
 });
 
-// Concat all .css libs.
-gulp.task('concat-css', function() {
-    return gulp.src(cssFiles)
-               .pipe(concat('angular2crud.css'))
-               .pipe(gulp.dest('./dist'));
+// Lint all custom TypeScript files.
+gulp.task('lint-ts', function () {
+    return gulp.src(appFiles)
+               .pipe(tslint())
+               .pipe(tslint.report('prose'));
+});
+
+// Compile TypeScript files.
+gulp.task('compile-ts', function () {
+    var tsResult = tsProject.src()
+                            .pipe(ts(tsProject));
+
+    return tsResult.js.pipe(gulp.dest('client/src/js'));
+});
+
+// Watch TypeScript files and run tasks when they change.
+gulp.task('watch', function() {
+    gulp.watch([appFiles], ['lint-ts', 'compile-ts']);
 });
 
 // Default build task (run by typing 'gulp').
-gulp.task('default', ['concat-angular', 'concat-css']);
+gulp.task('default', ['concat-angular', 'lint-ts', 'compile-ts', 'watch']);

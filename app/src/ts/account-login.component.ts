@@ -5,25 +5,25 @@ import {ApiService} from './api.service';
 @Component({
     selector: 'login',
     template: `
-            <h4>Login</h4>
+        <h4>Login</h4>
 
-            <span class="error" *ngIf="loginError">
-                Invalid Email/Password Combination. 
-                Please Try Again.
-                <br>
-                <br>
-            </span>
+        <span *ngIf="loginError">
+            Invalid Email/Password Combination. 
+            Please Try Again.
+            <br>
+            <br>
+        </span>
 
-            <form #f="ngForm" (ngSubmit)="onSubmit(email.value, password.value)">
-                <label for="email">Email</label>
-                <input type="email" #email id="email" required>
+        <form #f="ngForm" (ngSubmit)="onSubmit(email.value, password.value)">
+            <label for="email">Email</label>
+            <input type="email" #email id="email" required>
 
-                <label for="password">Password</label>
-                <input type="password" #password required>
+            <label for="password">Password</label>
+            <input type="password" #password required>
 
-                <button type="submit">Submit</button>
-                <a href="create">Create Account</a>
-            </form>
+            <button type="submit">Submit</button>
+            <a href="create">Create Account</a>
+        </form>
     `
 })
 export class AccountLoginComponent {
