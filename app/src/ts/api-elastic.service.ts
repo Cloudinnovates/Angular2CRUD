@@ -24,7 +24,7 @@ export class ApiElasticService {
         var url = this.BASE_URL + '/contact/_search';
 
         return this._http.get(url) // HTTP GET request to URL.
-        .map(res => { 
+        .map(res => {
             return res.json().hits.hits; // Map response to JSON and get Elastic hits.
         })
         .map((hits: Array<any>) => { // Map Elastic hits to contact list.

@@ -48,8 +48,7 @@ export class AccountLoginComponent {
         this._apiService.loginAccount(email, password, success => {
             if (success) {
                 this._router.navigate(['Dashboard/Contacts']);
-            }
-            else {
+            } else {
                 this.loginError = true;
             }
         });

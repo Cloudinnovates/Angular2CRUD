@@ -25,7 +25,7 @@ import {Contact} from './contact';
 })
 export class ContactEditComponent implements OnInit {
     public contact: Contact; // Contact we are editing.
-    
+
     /**
      * ContactEditComponent Constructor.
      *
@@ -34,7 +34,7 @@ export class ContactEditComponent implements OnInit {
      * Note: Underscore convention in Angular 2 signifies a private variable.
      */
     constructor(private _router: Router,
-                private _routeParams: RouteParams, 
+                private _routeParams: RouteParams,
                 private _apiService: ApiService) {}
 
     /**
@@ -43,7 +43,7 @@ export class ContactEditComponent implements OnInit {
      */
     ngOnInit() {
         let id = this._routeParams.get('id'); // 'let' keyword allows block scoping for variables.
-        this._apiService.getContact(id).subscribe(contact => this.contact = contact); 
+        this._apiService.getContact(id).subscribe(contact => this.contact = contact);
     }
 
     /**

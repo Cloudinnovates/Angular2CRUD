@@ -9,7 +9,7 @@ import {ApiService} from './api.service';
 export class AccountAuthRouterOutletDirective extends RouterOutlet {
     public publicRoutes: any; // Public route dictionary.
     private parentRouter: Router; // Reference to parent router of this router outlet.
-    
+
     /**
      * AccountAuthRouterOutletDirective Constructor.
      */

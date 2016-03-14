@@ -33,7 +33,7 @@ import {ApiService} from './api.service';
 ])
 export class DashboardComponent implements OnInit {
     public email: string; // Logged in user email.
-    
+
     /**
      * DashboardComponent Constructor.
      *
@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit {
      */
     constructor(private _router: Router,
                 private _apiService: ApiService) {}
-    
+
     /**
      * Lifecycle Hook: ngOnInit - after the first ngOnChanges.
      * More Info: https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html

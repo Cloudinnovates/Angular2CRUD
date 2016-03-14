@@ -23,8 +23,7 @@ export class ApiService {
     getContacts() {
         if (this.elastic) {
             return this._apiElasticService.getContacts();
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.getContacts();
         }
     }
@@ -35,8 +34,7 @@ export class ApiService {
     init() {
         if (this.elastic) {
             return this._apiElasticService.init();
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.init();
         }
     }
@@ -49,8 +47,7 @@ export class ApiService {
     createContact(contact: Contact) {
         if (this.elastic) {
             return this._apiElasticService.createContact(contact);
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.createContact(contact);
         }
     }
@@ -63,8 +60,7 @@ export class ApiService {
     getContact(id: number | string) {
         if (this.elastic) {
             return this._apiElasticService.getContact(id);
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.getContact(id);
         }
     }
@@ -77,8 +73,7 @@ export class ApiService {
     updateContact(contact: Contact) {
         if (this.elastic) {
             return this._apiElasticService.updateContact(contact);
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.updateContact(contact);
         }
     }
@@ -91,10 +86,9 @@ export class ApiService {
     deleteContact(id: number | string) {
         if (this.elastic) {
             return this._apiElasticService.deleteContact(id);
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.deleteContact(id);
-        }  
+        }
     }
 
     /**
@@ -107,10 +101,9 @@ export class ApiService {
     createAccount(email: string, password: string, success: Function) {
         if (this.elastic) {
             console.log('ERROR: createAccount(email, password, success) for Elastic is not implemented.');
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.createAccount(email, password, success);
-        } 
+        }
     }
 
     /**
@@ -123,10 +116,9 @@ export class ApiService {
     loginAccount(email: string, password: string, success: Function) {
         if (this.elastic) {
             console.log('ERROR: loginAccount(email, password, success) for Elastic is not implemented.');
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.loginAccount(email, password, success);
-        } 
+        }
     }
 
     /**
@@ -137,8 +129,7 @@ export class ApiService {
     logoutAccount(success: Function) {
         if (this.elastic) {
             console.log('ERROR: logoutAccount(success) for Elastic is not implemented.');
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.logoutAccount(success);
         }
     }
@@ -153,8 +144,7 @@ export class ApiService {
     deleteAccount(email: string, password: string, success: Function) {
         if (this.elastic) {
             console.log('ERROR: deleteAccount(email, password, success) for Elastic is not implemented.');
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.deleteAccount(email, password, success);
         }
     }
@@ -165,8 +155,7 @@ export class ApiService {
     getLoggedInAccountEmail() {
         if (this.elastic) {
             console.log('ERROR: getLoggedInAccountEmail() for Elastic is not implemented.');
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.getLoggedInAccountEmail();
         }
     }
@@ -177,8 +166,7 @@ export class ApiService {
     getLocalStorageSession() {
         if (this.elastic) {
             console.log('ERROR: getLocalStorageSession() for Elastic is not implemented.');
-        }
-        else if (this.firebase) {
+        } else if (this.firebase) {
             return this._apiFirebaseService.getLocalStorageSession();
         }
     }

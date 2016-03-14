@@ -52,7 +52,9 @@ export class ApiFirebaseService {
     /**
      * Initialize API.
      */
-    init() {}
+    init() {
+        console.log('ERROR: init() for Firebase is not implemented.');
+    }
 
     /**
      * CREATE a contact.
@@ -122,10 +124,10 @@ export class ApiFirebaseService {
             password : password
         }, (error, userData) => {
             if (error) {
-                console.log("Error creating user:", error);
+                console.log('Error creating user:', error);
                 success(false);
             } else {
-                console.log("Successfully created user account with uid:", userData.uid);
+                console.log('Successfully created user account with uid:', userData.uid);
                 success(true);
             }
         });
@@ -144,10 +146,10 @@ export class ApiFirebaseService {
             password : password
         }, (error, authData) => {
             if (error) {
-                console.log("Login Failed!", error);
+                console.log('Login Failed!', error);
                 success(false);
             } else {
-                console.log("Authenticated successfully with payload:", authData);
+                console.log('Authenticated successfully with payload:', authData);
                 success(true);
             }
         });
@@ -164,10 +166,10 @@ export class ApiFirebaseService {
         var authData = this.firebase.getAuth(); // Check to make sure it worked.
 
         if (authData) {
-            console.log("User " + authData.uid + " is logged in with " + authData.provider);
+            console.log('User ' + authData.uid + ' is logged in with ' + authData.provider);
             success(false);
         } else {
-            console.log("User is logged out");
+            console.log('User is logged out');
             success(true);
         }
     }
@@ -185,10 +187,10 @@ export class ApiFirebaseService {
             password : password
         }, error => {
             if (error === null) {
-                console.log("User removed successfully");
+                console.log('User removed successfully');
                 success(true);
             } else {
-                console.log("Error removing user:", error);
+                console.log('Error removing user:', error);
                 success(false);
             }
         });
@@ -203,7 +205,7 @@ export class ApiFirebaseService {
         if (authData) {
             return authData.password.email;
         } else {
-            console.log("User is logged out");
+            console.log('User is logged out');
         }
     }
 

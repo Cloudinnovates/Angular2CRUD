@@ -40,7 +40,7 @@ gulp.task('compile-ts', function () {
     var tsResult = tsProject.src()
                             .pipe(ts(tsProject));
 
-    return tsResult.js.pipe(gulp.dest('client/src/js'));
+    return tsResult.js.pipe(gulp.dest('app/src/js'));
 });
 
 // Watch TypeScript files and run tasks when they change.

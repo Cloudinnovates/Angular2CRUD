@@ -36,8 +36,8 @@ export class ContactDetailComponent implements OnInit {
      * @param {ApiService} _apiService - Private ApiService injected into this component.
      * Note: Underscore convention in Angular 2 signifies a private variable.
      */
-    constructor(private _router: Router, 
-                private _routeParams: RouteParams, 
+    constructor(private _router: Router,
+                private _routeParams: RouteParams,
                 private _apiService: ApiService) {}
 
     /**
