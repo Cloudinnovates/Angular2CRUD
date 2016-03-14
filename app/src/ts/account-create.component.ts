@@ -15,7 +15,7 @@ import {ApiService} from './api.service';
             <input type="password" #password required>
 
             <button type="submit">Submit</button>
-            <a href="Angular2CRUD/login">Goto Login Page</a>
+            <a [routerLink]="['./Login']>Goto Login Page</a>
         </form>
     `
 })
