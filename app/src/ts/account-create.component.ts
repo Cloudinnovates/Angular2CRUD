@@ -16,7 +16,7 @@ import {ApiService} from './api.service';
             <input type="password" #password required>
 
             <button type="submit">Submit</button>
-            <button [routerLink]="['Login']>Goto Login Page</button>
+            <a [routerLink]="[Login']">Goto Login Page</a>
         </form>
     `
 })
