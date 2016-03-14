@@ -22,7 +22,7 @@ import {ApiService} from './api.service';
             <input type="password" #password required>
 
             <button type="submit">Submit</button>
-            <a href="create">Create Account</a>
+            <a href="Angular2CRUD/create">Create Account</a>
         </form>
     `
 })
