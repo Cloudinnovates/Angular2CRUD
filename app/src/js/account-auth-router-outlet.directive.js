@@ -42,6 +42,7 @@ System.register(['angular2/core', 'angular2/router', './api.service'], function(
                     this._apiService = _apiService;
                     this.parentRouter = _parentRouter;
                     this.publicRoutes = {
+                        '': true,
                         '/login': true,
                         '/create': true
                     };
