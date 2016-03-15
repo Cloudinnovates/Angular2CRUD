@@ -8,6 +8,13 @@ import {ApiService} from './api.service';
     template: `
         <h4>Create Account</h4>
 
+        <span *ngIf="createError">
+            Invalid Email/Password Combination. 
+            Please Try Again.
+            <br>
+            <br>
+        </span>
+
         <form #f="ngForm" (ngSubmit)="onSubmit(email.value, password.value)">
             <label for="email">Email</label>
             <input type="email" #email id="email" required>
@@ -21,6 +28,7 @@ import {ApiService} from './api.service';
     `
 })
 export class AccountCreateComponent {
+    public createError = false; // True if there is a create error.
 
     /**
      * CreateComponent Constructor.
@@ -36,9 +44,13 @@ export class AccountCreateComponent {
      * Submit click handler.
      */
     onSubmit(email, password) {
+        this.createError = false;
+
         this._apiService.createAccount(email, password, success => {
             if (success) {
                 this._router.navigate(['Login']);
+            } else {
+                this.createError = true;
             }
         });
     }

@@ -35,15 +35,20 @@ System.register(['angular2/core', 'angular2/router', './api.service'], function(
                 function AccountCreateComponent(_router, _apiService) {
                     this._router = _router;
                     this._apiService = _apiService;
+                    this.createError = false; // True if there is a create error.
                 }
                 /**
                  * Submit click handler.
                  */
                 AccountCreateComponent.prototype.onSubmit = function (email, password) {
                     var _this = this;
+                    this.createError = false;
                     this._apiService.createAccount(email, password, function (success) {
                         if (success) {
                             _this._router.navigate(['Login']);
+                        }
+                        else {
+                            _this.createError = true;
                         }
                     });
                 };
@@ -57,7 +62,7 @@ System.register(['angular2/core', 'angular2/router', './api.service'], function(
                     core_1.Component({
                         selector: 'create',
                         directives: [router_1.ROUTER_DIRECTIVES],
-                        template: "\n        <h4>Create Account</h4>\n\n        <form #f=\"ngForm\" (ngSubmit)=\"onSubmit(email.value, password.value)\">\n            <label for=\"email\">Email</label>\n            <input type=\"email\" #email id=\"email\" required>\n            \n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password required>\n\n            <button type=\"submit\">Submit</button>\n            <button (click)=\"navLogin()\">Goto Login Page</button>\n        </form>\n    "
+                        template: "\n        <h4>Create Account</h4>\n\n        <span *ngIf=\"createError\">\n            Invalid Email/Password Combination. \n            Please Try Again.\n            <br>\n            <br>\n        </span>\n\n        <form #f=\"ngForm\" (ngSubmit)=\"onSubmit(email.value, password.value)\">\n            <label for=\"email\">Email</label>\n            <input type=\"email\" #email id=\"email\" required>\n            \n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password required>\n\n            <button type=\"submit\">Submit</button>\n            <button (click)=\"navLogin()\">Goto Login Page</button>\n        </form>\n    "
                     }), 
                     __metadata('design:paramtypes', [router_1.Router, api_service_1.ApiService])
                 ], AccountCreateComponent);
