@@ -23,7 +23,7 @@ import {ApiService} from './api.service';
             <input type="password" #password required>
 
             <button type="submit">Submit</button>
-            <button (click)="navLogin()">Goto Login Page</button>
+            <a [routerLink]="['Login']">Goto Login Page</a>
         </form>
     `
 })
@@ -53,12 +53,5 @@ export class AccountCreateComponent {
                 this.createError = true;
             }
         });
-    }
-
-    /**
-     * Navigate to Login page click handler.
-     */
-    navLogin() {
-        this._router.navigate(['Login']);
     }
 }
