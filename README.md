@@ -1,6 +1,7 @@
 # Angular2CRUD
 
 This is a sample CRUD - Create, Read, Update, Delete - application written in Angular 2. 
+There are currently no styles (for simplicity), and uses Firebase as a back-end.
 
 Try out the live application here: https://camargo.github.io/Angular2CRUD/
 
