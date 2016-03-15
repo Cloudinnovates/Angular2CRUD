@@ -9,7 +9,7 @@ import {ApiService} from './api.service';
         <h4>Create Account</h4>
 
         <span *ngIf="createError">
-            Invalid Email/Password Combination. 
+            Unable to create account. 
             Please Try Again.
             <br>
             <br>
