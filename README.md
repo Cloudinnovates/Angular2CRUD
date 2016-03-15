@@ -30,4 +30,4 @@ Try these tutorials first to get acquainted with Angular 2:
 1. https://angular.io/docs/ts/latest/quickstart.html
 2. https://angular.io/docs/ts/latest/tutorial/
 
-Based off of the Angular 1 version: https://github.com/jshea/AngularCRUD.
+Inspired by the Angular 1 version: https://github.com/jshea/AngularCRUD.
