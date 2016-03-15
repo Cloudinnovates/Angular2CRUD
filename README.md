@@ -15,7 +15,7 @@ Try out the live application here: https://camargo.github.io/Angular2CRUD/
 
 ## Build Instructions
 
-To build this project you need to have the latest version of node and npm installed.
+To build this project you need to have the latest version of [node](https://nodejs.org/en/) installed.
 <br>
 If you're on a Mac, you will need to run npm as sudo.
 
