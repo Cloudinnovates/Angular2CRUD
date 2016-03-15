@@ -37,6 +37,8 @@ export class AccountAuthRouterOutletDirective extends RouterOutlet {
     activate(instruction: ComponentInstruction) {
         var url = this.parentRouter.lastNavigationAttempt;
 
+        console.log(url);
+
         if (!this.publicRoutes[url] && !this._apiService.getLocalStorageSession()) {
             this.parentRouter.navigate(['Login']);
         }

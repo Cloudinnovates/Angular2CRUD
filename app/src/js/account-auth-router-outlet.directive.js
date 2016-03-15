@@ -54,6 +54,7 @@ System.register(['angular2/core', 'angular2/router', './api.service'], function(
                  */
                 AccountAuthRouterOutletDirective.prototype.activate = function (instruction) {
                     var url = this.parentRouter.lastNavigationAttempt;
+                    console.log(url);
                     if (!this.publicRoutes[url] && !this._apiService.getLocalStorageSession()) {
                         this.parentRouter.navigate(['Login']);
                     }
