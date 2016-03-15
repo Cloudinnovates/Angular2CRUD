@@ -23,7 +23,7 @@ import {ApiService} from './api.service';
             <input type="password" #password required>
 
             <button type="submit">Submit</button>
-            <a (click)="navCreate()">Create Account</a>
+            <button (click)="navCreate()">Create Account</button>
         </form>
     `
 })
