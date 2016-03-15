@@ -23,8 +23,8 @@ export class AccountAuthRouterOutletDirective extends RouterOutlet {
         this.parentRouter = _parentRouter;
 
         this.publicRoutes = { // Dictionary of routes anyone can access (no auth required).
-            '/Angular2CRUD/login': true,
-            '/Angular2CRUD/create': true
+            '/login': true,
+            '/create': true
         };
     }
 
