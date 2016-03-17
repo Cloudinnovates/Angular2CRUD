@@ -27,9 +27,8 @@ import {ApiService} from './api.service';
         </form>
 
         <br>
-        <br>
-        
-        Example Account: Email: test@test.com, Password: abcdef
+
+        Email: test@test.com, Password: abcdef
     `
 })
 export class AccountLoginComponent {
