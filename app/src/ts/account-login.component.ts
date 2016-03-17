@@ -25,6 +25,11 @@ import {ApiService} from './api.service';
             <button type="submit">Submit</button>
             <a [routerLink]="['Create']">Create Account</a>
         </form>
+
+        <br>
+        <br>
+        
+        Example Account: Email: test@test.com, Password: abcdef
     `
 })
 export class AccountLoginComponent {
