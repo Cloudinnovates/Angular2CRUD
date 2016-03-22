@@ -8,7 +8,7 @@ Try out the live application here: https://camargo.github.io/Angular2CRUD/
 * Latest and greatest [version](https://github.com/angular/angular/blob/master/CHANGELOG.md) of Angular 2: 2.0.0-beta.11 (2016-03-18).
 * Uses Angular 2 [Http](https://angular.io/docs/js/latest/api/http/) and [Router](https://angular.io/docs/ts/latest/api/router/) APIs.
 * Route protection based on authentication.
-* For simplicity there are no styles right now. We will add Angular 2 Material when it is more stable.
+* For simplicity there are no styles right now. We will add [Angular 2 Material](https://github.com/angular/material2) when it is more stable.
 * [Firebase](https://www.firebase.com/) back-end and [Elastic](https://www.elastic.co/products/elasticsearch) back-end.
       * To add another back-end: Create api-YOUR_BACKEND.service.ts and add it to api.service.ts.
 * Uses [Gulp](http://gulpjs.com/) to compile, lint, and watch TypeScript files.
