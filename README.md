@@ -5,7 +5,7 @@ This is a sample CRUD - Create, Read, Update, Delete - application written in An
 Try out the live application here: https://camargo.github.io/Angular2CRUD/
 
 ## Features
-* Latest and greatest [version](https://github.com/angular/angular/blob/master/CHANGELOG.md) of Angular 2: 2.0.0-beta.11 (2016-03-18).
+* Latest and greatest [version](https://github.com/angular/angular/blob/master/CHANGELOG.md) of Angular 2: 2.0.0-beta.12 (2016-03-23).
 * Uses Angular 2 [Http](https://angular.io/docs/js/latest/api/http/) and [Router](https://angular.io/docs/ts/latest/api/router/) APIs.
 * Route protection based on authentication.
 * For simplicity there are no styles right now. We will add [Angular 2 Material](https://github.com/angular/material2) when it is more stable.
