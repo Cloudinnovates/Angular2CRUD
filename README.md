@@ -2,7 +2,7 @@
 
 This is a sample CRUD - Create, Read, Update, Delete - application written in Angular 2.
 
-Try out the live application here: https://camargo.github.io/Angular2CRUD/
+Try out the live app here: https://camargo.github.io/Angular2CRUD/
 
 ## Features
 * Latest and greatest [version](https://github.com/angular/angular/blob/master/CHANGELOG.md) of Angular 2: 2.0.0-beta.12 (2016-03-23).
