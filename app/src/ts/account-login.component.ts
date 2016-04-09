@@ -1,10 +1,11 @@
 import {Component} from 'angular2/core';
 import {Router} from 'angular2/router';
 import {ApiService} from './api.service';
-import {MdButton} from '@angular2-material/button/button';
+import {MdButton} from 'node_modules/@angular2-material/button/button.js';
 
 @Component({
     selector: 'login',
+    directives: [MdButton],
     template: `
         <h4>Login</h4>
 
@@ -22,8 +23,8 @@ import {MdButton} from '@angular2-material/button/button';
             <label for="password">Password</label>
             <input type="password" #password required>
 
-            <button md-button type="submit">Submit</button>
-            <a href="create">Create Account</a>
+            <button md-raised-button color="primary" type="submit">Submit</button>
+            <a md-raised-button href="create">Create Account</a>
         </form>
     `
 })
