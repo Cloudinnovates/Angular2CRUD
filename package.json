@@ -8,6 +8,9 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@angular2-material/button": "^2.0.0-alpha.1",
+    "@angular2-material/checkbox": "^2.0.0-alpha.1",
+    "@angular2-material/core": "^2.0.0-alpha.1",
     "angular2": "^2.0.0-beta.13",
     "es6-promise": "^3.1.2",
     "es6-shim": "^0.35.0",

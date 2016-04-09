@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core';
 import {Router} from 'angular2/router';
 import {ApiService} from './api.service';
+import {MdButton} from '@angular2-material/button/button';
 
 @Component({
     selector: 'login',
@@ -21,7 +22,7 @@ import {ApiService} from './api.service';
             <label for="password">Password</label>
             <input type="password" #password required>
 
-            <button type="submit">Submit</button>
+            <button md-button type="submit">Submit</button>
             <a href="create">Create Account</a>
         </form>
     `
