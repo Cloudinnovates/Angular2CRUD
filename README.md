@@ -19,11 +19,10 @@ To build this project you need to have the latest version of [node](https://node
 <br>
 If you're on a Mac, you will need to run npm as sudo.
 
-0. npm install gulp -g
 1. git clone https://github.com/camargo/Angular2CRUD.git
 2. npm install
 3. npm start
-      
+
 ## Supplemental Instruction
 
 Try these tutorials first to get acquainted with Angular 2:
