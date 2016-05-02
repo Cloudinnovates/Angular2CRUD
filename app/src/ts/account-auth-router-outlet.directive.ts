@@ -1,4 +1,4 @@
-import {Directive, ElementRef, DynamicComponentLoader, Attribute} from 'angular2/core';
+import {Directive, ViewContainerRef, DynamicComponentLoader, Attribute} from 'angular2/core';
 import {Router, RouterOutlet, ComponentInstruction} from 'angular2/router';
 import {ApiService} from './api.service';
 
@@ -13,12 +13,12 @@ export class AccountAuthRouterOutletDirective extends RouterOutlet {
     /**
      * AccountAuthRouterOutletDirective Constructor.
      */
-    constructor(_elementRef: ElementRef,
+    constructor(_viewContainerRef: ViewContainerRef,
                 _loader: DynamicComponentLoader,
                 _parentRouter: Router,
                 @Attribute('name') nameAttr: string,
                 private _apiService: ApiService) {
-        super(_elementRef, _loader, _parentRouter, nameAttr);
+        super(_viewContainerRef, _loader, _parentRouter, nameAttr);
 
         this.parentRouter = _parentRouter;
 

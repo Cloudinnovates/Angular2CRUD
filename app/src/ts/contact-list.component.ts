@@ -15,7 +15,7 @@ import {ApiService} from './api.service';
                 <th>Phone Number</th>
                 <th>Email</th>
             </tr>
-            <tr *ngFor="#contact of contacts" (click)="onSelect(contact)">
+            <tr *ngFor="let contact of contacts" (click)="onSelect(contact)">
                 <td>{{contact.id}}</td>
                 <td>{{contact.firstName}}</td>
                 <td>{{contact.lastName}}</td>
