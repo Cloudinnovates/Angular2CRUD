@@ -1,5 +1,5 @@
-import {Injectable} from 'angular2/core';
-import {Http} from 'angular2/http';
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
 import {Contact} from './contact';
 
 import 'rxjs/add/operator/map'; // Issue: https://github.com/angular/angular/pull/5947

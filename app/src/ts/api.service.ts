@@ -1,4 +1,4 @@
-import {Injectable} from 'angular2/core';
+import {Injectable} from '@angular/core';
 import {ApiElasticService} from './api-elastic.service';
 import {ApiFirebaseService} from './api-firebase.service';
 import {Contact} from './contact';

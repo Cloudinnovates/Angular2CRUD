@@ -1,5 +1,5 @@
-import {Component, OnInit} from 'angular2/core';
-import {Router, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component, OnInit} from '@angular/core';
+import {Router, RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {ContactListComponent} from './contact-list.component';
 import {ContactDetailComponent} from './contact-detail.component';
 import {ContactNewComponent} from './contact-new.component';

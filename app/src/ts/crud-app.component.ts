@@ -1,15 +1,14 @@
-import {Component} from 'angular2/core';
-import {RouteConfig} from 'angular2/router';
+import {Component} from '@angular/core';
+import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {AccountLoginComponent} from './account-login.component';
 import {AccountCreateComponent} from './account-create.component';
-import {AccountAuthRouterOutletDirective} from './account-auth-router-outlet.directive';
 import {DashboardComponent} from './dashboard.component';
 
 @Component({
     selector: 'crud-app',
-    directives: [AccountAuthRouterOutletDirective],
+    directives: [ROUTER_DIRECTIVES],
     template: `
-        <account-auth-router-outlet></account-auth-router-outlet> <!-- Display views produced by the router. -->
+        <router-outlet></router-outlet> <!-- Display views produced by the router. -->
     `
 })
 @RouteConfig([ // Configure a router with RouteDefinitions, each mapping a URL path to a component.
